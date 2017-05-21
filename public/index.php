@@ -1,6 +1,6 @@
 <?php
 
-require('../_core/_Router.php');
+require('../_core/Router.php');
 $router = new _Router;
 
 //Add some routes

@@ -9,7 +9,7 @@ public function add($route, $params = []){
 	//convert variables {controller} {action}
 	$route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z-]+)', $route);
 	//convert variables with custom regular expression {id:\d+}
-	$route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?P<\1>\2)', $route);
+	$route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?P<\1>[a-z-]+)', $route);
 	//Add start and end delimiters, and case censitive flag
 	$route = '/^'. $route . '$/i';
 
