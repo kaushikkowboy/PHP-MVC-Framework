@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-
+use \Core\View;
 class Home extends \Core\Controller {
 	protected function before(){
 		echo '(before)';
@@ -12,6 +12,9 @@ class Home extends \Core\Controller {
 
 
 	public function indexAction(){
-		echo 'Hello from Home index function';
+		View::render('Home/index.php', [
+			'name' => 'Kaushik',
+			'knows' => ['HTML','CSS','PHP'] 
+			]);
 	}
 }
